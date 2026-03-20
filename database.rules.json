@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "cookie_consents": {
+      ".read": false,
+      ".write": false
+    },
+    "contatos": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

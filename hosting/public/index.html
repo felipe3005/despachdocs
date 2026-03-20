@@ -6,6 +6,7 @@
 <title>DespachDocs | Despachante Imobiliário em Campinas</title>
 <meta name="description" content="Despachante imobiliário especializado em documentação, escrituras e registros. Garanta segurança jurídica e agilidade na compra ou venda do seu imóvel. Saiba mais!">
 <meta name="keywords" content="Despachante imobiliário, documentação, escrituras, registros, segurança jurídica, Campinas">
+<link rel="icon" type="image/png" href="img/favicon/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -22,9 +23,9 @@
 
 <nav class="nav-bar" id="navbar">
   <div class="nav-container">
-    <a href="#home" class="nav-logo">Despach<span>Docs</span></a>
+    <a href="#home" class="nav-logo">Despach<span>Docs</span><i class="fa-solid fa-file-signature logo-icon"></i></a>
     <ul class="nav-links"><li><a href="#home">Início</a></li><li><a href="#about">Sobre</a></li><li><a href="#services">Serviços</a></li><li><a href="#faq">FAQ</a></li><li><a href="#location">Localização</a></li></ul>
-    <a href="#contact" class="nav-cta">Solicitar Orçamento</a>
+    <a href="#" class="nav-cta" onclick="openWhatsAppModal(event)">Solicitar Orçamento</a>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -33,7 +34,7 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div><div class="hero-grid-lines"></div><div class="hero-particles" id="heroParticles"></div>
   <div class="hero-content">
-    <div class="hero-badge reveal" data-delay="1"><i class="fa-solid fa-shield-halved"></i> Segurança Jurídica Garantida</div>
+    <div class="hero-badge reveal" data-delay="1"><i class="fa-solid fa-file-signature"></i> Despachante Imobiliário</div>
     <div class="hero-text-carousel" id="heroCarousel">
       <div class="hero-slide active" data-index="0"><h1 class="hero-title">Sua única preocupação será a <span class="accent">entrega das chaves.</span></h1><p class="hero-subtitle">Deixe a burocracia documental com quem entende. Segurança total para quem compra e para quem vende.</p></div>
       <div class="hero-slide" data-index="1"><h1 class="hero-title">Documentação imobiliária <span class="accent">sem filas e sem erros.</span></h1><p class="hero-subtitle">Agilizamos certidões, ITBI e registros com o conhecimento técnico que o seu negócio exige.</p></div>
@@ -42,7 +43,7 @@
     </div>
     <div class="hero-carousel-controls reveal" data-delay="3"><div class="carousel-dots"><button class="carousel-dot active" data-index="0"></button><button class="carousel-dot" data-index="1"></button><button class="carousel-dot" data-index="2"></button><button class="carousel-dot" data-index="3"></button></div><div class="carousel-counter"><span id="slideCounter">01</span> / 04</div></div>
     <div class="hero-buttons reveal" data-delay="4"><a href="#contact" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Solicite um Orçamento</a><a href="#services" class="btn-outline"><i class="fa-solid fa-arrow-down"></i> Conheça Nossos Serviços</a></div>
-    <div class="hero-stats reveal" data-delay="5"><div class="stat-item"><div class="stat-number" data-target="500">0</div><div class="stat-label">Processos Concluídos</div></div><div class="stat-item"><div class="stat-number" data-target="50">0</div><div class="stat-label">% Mais Rápido</div></div><div class="stat-item"><div class="stat-number" data-target="100">0</div><div class="stat-label">% Segurança</div></div></div>
+    <div class="hero-stats reveal" data-delay="5"><div class="stat-item"><div class="stat-number" data-target="10">0</div><div class="stat-label">Anos de Experiência</div></div><div class="stat-item"><div class="stat-number" data-target="500">0</div><div class="stat-label">Processos Concluídos</div></div><div class="stat-item"><div class="stat-number" data-target="50">0</div><div class="stat-label">% Mais Rápido</div></div><div class="stat-item"><div class="stat-number" data-target="100">0</div><div class="stat-label">% Segurança</div></div></div>
   </div>
 </section>
 
@@ -79,7 +80,7 @@
 <section class="faq" id="faq">
   <div class="section-glow" style="top:50%;left:-300px;transform:translateY(-50%);"></div>
   <div class="section-container"><div class="faq-grid">
-    <div class="reveal-left"><div class="section-label">Dúvidas Frequentes</div><h2 class="section-heading">Entenda como funciona a burocracia imobiliária sem mistérios.</h2><p class="section-desc" style="margin-bottom:32px;">Separamos as perguntas mais comuns para ajudar você a entender a importância de cada etapa do processo documental.</p><a href="#contact" class="btn-primary"><i class="fa-solid fa-comments"></i> Falar com Especialista</a></div>
+    <div class="reveal-left"><div class="section-label">Dúvidas Frequentes</div><h2 class="section-heading">Entenda como funciona a burocracia imobiliária sem mistérios.</h2><p class="section-desc" style="margin-bottom:32px;">Separamos as perguntas mais comuns para ajudar você a entender a importância de cada etapa do processo documental.</p><a href="#" class="btn-primary" onclick="openWhatsAppModal(event)"><i class="fa-solid fa-comments"></i> Falar com Especialista</a></div>
     <div class="faq-list">
       <div class="faq-item active reveal" data-delay="1"><button class="faq-question">Por que contratar um despachante se o cartório já faz o serviço?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-answer" style="max-height:200px;"><div class="faq-answer-inner">O cartório é um órgão executor. O despachante é o seu representante técnico que analisa se os documentos estão corretos antes de entrarem no cartório, evitando notas de devolução e perda de prazos.</div></div></div>
       <div class="faq-item reveal" data-delay="2"><button class="faq-question">Qual a diferença entre Escritura e Registro?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button><div class="faq-answer"><div class="faq-answer-inner">A Escritura prova a vontade de venda; o Registro prova quem é o dono. Como diz o ditado: "Quem não registra, não é dono". Nós cuidamos de ambos os processos para sua total segurança.</div></div></div>
@@ -108,20 +109,67 @@
 
 <section class="contact" id="contact"><div class="section-glow" style="bottom:-200px;left:50%;transform:translateX(-50%);"></div>
   <div class="section-container"><div class="contact-grid">
-    <div class="reveal-left"><div class="section-label">Contato</div><h2 class="section-heading">Fale com quem entende de documentação imobiliária</h2><p class="section-desc" style="margin-bottom:32px;">Preencha o formulário ao lado ou, se precisar de urgência, fale diretamente pelo nosso WhatsApp.</p><a href="https://wa.me/5519997908100" target="_blank" class="contact-whatsapp"><i class="fa-brands fa-whatsapp"></i> Fale conosco agora pelo WhatsApp</a><div class="contact-social"><a href="#" class="contact-social-link"><i class="fa-brands fa-instagram"></i></a><a href="#" class="contact-social-link"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
-    <div class="contact-form reveal-right tilt-card">
-      <div class="form-row"><div class="form-group"><label>Nome</label><input type="text" placeholder="Seu nome completo"></div><div class="form-group"><label>Telefone</label><input type="tel" placeholder="(00) 00000-0000"></div></div>
-      <div class="form-group"><label>E-mail</label><input type="email" placeholder="seuemail@exemplo.com"></div>
-      <div class="form-group"><label>Tipo de Serviço</label><select><option value="">Selecione o serviço desejado</option><option>Análise de Documentação (Due Diligence)</option><option>Gestão de ITBI e Taxas</option><option>Escrituras e Contratos</option><option>Registro de Imóveis (RGI)</option><option>Averbações e Regularizações</option><option>Consultoria Especializada</option></select></div>
-      <div class="form-group"><label>Mensagem</label><textarea placeholder="Descreva brevemente sua necessidade..."></textarea></div>
-      <button type="button" class="form-submit">Enviar Mensagem</button>
-    </div>
+    <div class="reveal-left"><div class="section-label">Contato</div><h2 class="section-heading">Fale com quem entende de documentação imobiliária</h2><p class="section-desc" style="margin-bottom:32px;">Preencha o formulário ao lado ou, se precisar de urgência, fale diretamente pelo nosso WhatsApp.</p><a href="#" class="contact-whatsapp" onclick="openWhatsAppModal(event)"><i class="fa-brands fa-whatsapp"></i> Fale conosco agora pelo WhatsApp</a><div class="contact-social"><a href="#" class="contact-social-link"><i class="fa-brands fa-instagram"></i></a><a href="#" class="contact-social-link"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <form class="contact-form reveal-right tilt-card" id="contactForm" onsubmit="submitContactForm(event)">
+      <div class="form-row"><div class="form-group"><label>Nome</label><input type="text" id="formNome" placeholder="Seu nome completo" required></div><div class="form-group"><label>Telefone</label><input type="tel" id="formTelefone" placeholder="(00) 00000-0000" required></div></div>
+      <div class="form-group"><label>E-mail</label><input type="email" id="formEmail" placeholder="seuemail@exemplo.com"></div>
+      <div class="form-group"><label>Tipo de Serviço</label><select id="formServico"><option value="">Selecione o serviço desejado</option><option>Análise de Documentação (Due Diligence)</option><option>Gestão de ITBI e Taxas</option><option>Escrituras e Contratos</option><option>Registro de Imóveis (RGI)</option><option>Averbações e Regularizações</option><option>Consultoria Especializada</option></select></div>
+      <div class="form-group"><label>Mensagem</label><textarea id="formMensagem" placeholder="Descreva brevemente sua necessidade..."></textarea></div>
+      <button type="submit" class="form-submit" id="formSubmitBtn">Enviar Mensagem</button>
+      <div class="form-feedback" id="formFeedback"></div>
+    </form>
   </div></div>
 </section>
 
-<footer class="footer"><div class="section-container"><div class="footer-content"><div class="footer-logo">Despach<span>Docs</span></div><div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div><div class="footer-bottom"><p>DespachDocs 2026 &copy; Todos os direitos reservados.</p><p>Despachante Imobiliário em <a href="#">Campinas/SP</a></p></div></div></footer>
+<footer class="footer"><div class="section-container"><div class="footer-content"><div class="footer-logo">Despach<span>Docs</span><i class="fa-solid fa-file-signature logo-icon"></i></div><div class="footer-social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div><div class="footer-bottom"><p>DespachDocs 2026 &copy; Todos os direitos reservados.</p><p>Despachante Imobiliário em <a href="#">Campinas/SP</a></p></div></div></footer>
 
-<a href="https://wa.me/5519997908100" target="_blank" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+    <div class="cookie-banner-text">
+      <p>Utilizamos cookies para melhorar sua experiência em nosso site e direcionar conteúdos relevantes para você. Ao continuar, você concorda e aceita nossa <a href="#" class="cookie-link">Política de Privacidade</a>. Se preferir, informe quais cookies você permite utilizarmos <a href="#" class="cookie-link" onclick="openCookiePrefs(event)">clicando aqui</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+      <button class="cookie-btn-decline" onclick="declineCookies()">Recusar</button>
+    </div>
+  </div>
+  <!-- Cookie Preferences Panel -->
+  <div class="cookie-prefs" id="cookiePrefs">
+    <div class="cookie-prefs-header">
+      <h4>Preferências de Cookies</h4>
+      <button class="cookie-prefs-close" onclick="closeCookiePrefs()">&times;</button>
+    </div>
+    <div class="cookie-pref-item">
+      <div class="cookie-pref-info"><strong>Essenciais</strong><span>Necessários para o funcionamento do site.</span></div>
+      <label class="cookie-toggle"><input type="checkbox" checked disabled><span class="cookie-slider"></span></label>
+    </div>
+    <div class="cookie-pref-item">
+      <div class="cookie-pref-info"><strong>Analíticos</strong><span>Nos ajudam a entender como você usa o site.</span></div>
+      <label class="cookie-toggle"><input type="checkbox" id="cookieAnalytics" checked><span class="cookie-slider"></span></label>
+    </div>
+    <div class="cookie-pref-item">
+      <div class="cookie-pref-info"><strong>Marketing</strong><span>Usados para exibir conteúdos relevantes.</span></div>
+      <label class="cookie-toggle"><input type="checkbox" id="cookieMarketing" checked><span class="cookie-slider"></span></label>
+    </div>
+    <button class="cookie-btn-save" onclick="saveCookiePrefs()">Salvar Preferências</button>
+  </div>
+</div>
+
+<a href="#" class="whatsapp-float" onclick="openWhatsAppModal(event)"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- WhatsApp Modal -->
+<div class="wpp-modal-overlay" id="wppModal">
+  <div class="wpp-modal">
+    <button class="wpp-modal-close" onclick="closeWhatsAppModal()">&times;</button>
+    <div class="wpp-modal-icon"><i class="fa-brands fa-whatsapp"></i></div>
+    <h3 class="wpp-modal-title">Envie sua mensagem pelo WhatsApp</h3>
+    <p class="wpp-modal-desc">Digite sua mensagem e clique em enviar:</p>
+    <textarea class="wpp-modal-textarea" id="wppMessage" placeholder="Olá, gostaria de solicitar um orçamento..."></textarea>
+    <button class="wpp-modal-send" onclick="sendWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Enviar Mensagem</button>
+  </div>
+</div>
 
 <script src="js/preloader.js"></script>
 <script src="js/cursor.js"></script>
@@ -131,5 +179,8 @@
 <script src="js/faq.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/interactions.js"></script>
+<script src="js/whatsapp-modal.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/cookies.js"></script>
 </body>
 </html>

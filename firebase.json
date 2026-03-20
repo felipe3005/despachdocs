@@ -8,9 +8,30 @@
     ],
     "rewrites": [
       {
+        "source": "/api/cookie-consent",
+        "function": {
+          "functionId": "saveCookieConsent",
+          "region": "southamerica-east1"
+        }
+      },
+      {
+        "source": "/api/contact-form",
+        "function": {
+          "functionId": "saveContactForm",
+          "region": "southamerica-east1"
+        }
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ]
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs20"
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

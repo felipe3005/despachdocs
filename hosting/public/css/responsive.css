@@ -42,6 +42,10 @@
   .location-map { aspect-ratio: 4/3; }
   .marquee-item { font-size: 1rem; }
   .partners-header .section-heading { font-size: 1.5rem; }
+  .cookie-banner-inner { flex-direction: column; text-align: center; gap: 16px; padding: 20px; }
+  .cookie-banner-icon { margin: 0 auto; }
+  .cookie-banner-actions { width: 100%; justify-content: center; }
+  .cookie-pref-item { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
 
 @media(min-width:576px) and (max-width:767px) {

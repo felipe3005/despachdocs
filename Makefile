@@ -1,17 +1,25 @@
-.PHONY: serve build deploy clean
+.PHONY: serve build deploy clean deploy-functions deploy-all
 
-# Serve locally with Firebase emulator
+# Serve locally with Firebase emulators (hosting + functions)
 serve:
-	firebase emulators:start --only hosting
+	firebase emulators:start --only hosting,functions
 
 # Build (static site - no build step needed, placeholder for future use)
 build:
 	@echo "Static site - no build step required"
 	@echo "Files ready at hosting/public/"
 
-# Deploy to Firebase hosting
+# Deploy only hosting
 deploy:
 	firebase deploy --only hosting
+
+# Deploy only functions
+deploy-functions:
+	firebase deploy --only functions
+
+# Deploy everything (hosting + functions)
+deploy-all:
+	firebase deploy
 
 # Open local dev server (simple Python HTTP server as alternative)
 dev:
