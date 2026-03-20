@@ -1,25 +1,105 @@
-# Welcome to Next.js
+# DespachDocs
 
-This is the most minimal starter for your Next.js project.
+Site institucional da **DespachDocs** — Despachante Imobiliário em Campinas/SP, especializado em documentação, escrituras e registros de imóveis.
 
-## Deploy your own
+## Sobre o Projeto
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/hello-world&project-name=hello-world&repository-name=hello-world)
+Landing page moderna e responsiva para captação de clientes e apresentação dos serviços de despachante imobiliário, incluindo:
 
-## How to use
+- Análise de Documentação (Due Diligence)
+- Gestão de ITBI e Taxas
+- Escrituras e Contratos
+- Registro de Imóveis (RGI)
+- Averbações e Regularizações
+- Consultoria Especializada
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Tecnologias
 
-```bash
-npx create-next-app --example hello-world hello-world-app
+| Tecnologia | Uso |
+|---|---|
+| **HTML5** | Estrutura semântica da página |
+| **CSS3** | Estilização com variáveis CSS, Grid, Flexbox e animações |
+| **JavaScript (Vanilla)** | Interações, carousel, parallax, scroll reveal e efeitos visuais |
+| **Firebase Hosting** | Hospedagem e deploy |
+| **Google Fonts** | Tipografia (Montserrat + Playfair Display) |
+| **Font Awesome 6** | Iconografia |
+| **Google Maps Embed** | Mapa de localização |
+
+## Estrutura do Projeto
+
+```
+DespachDocs/
+├── firebase.json
+├── .firebaserc
+├── Makefile
+├── hosting/
+│   └── public/
+│       ├── index.html
+│       ├── css/
+│       │   ├── variables.css      # Variáveis CSS (cores, espaçamentos, transições)
+│       │   ├── base.css           # Reset, estilos globais e botões
+│       │   ├── components.css     # Componentes (nav, hero, about, services, faq, etc.)
+│       │   ├── animations.css     # Keyframes e animações de reveal
+│       │   └── responsive.css     # Media queries (374px a 2560px+)
+│       └── js/
+│           ├── preloader.js       # Tela de carregamento
+│           ├── cursor.js          # Efeito de glow no cursor
+│           ├── navigation.js      # Navbar, menu mobile e smooth scroll
+│           ├── animations.js      # Scroll reveal, contadores e parallax
+│           ├── carousel.js        # Carousel de textos do hero
+│           ├── faq.js             # Accordion de perguntas frequentes
+│           ├── particles.js       # Partículas animadas no hero
+│           └── interactions.js    # Efeito tilt nos cards e botões magnéticos
 ```
 
-```bash
-yarn create next-app --example hello-world hello-world-app
-```
+## Como Rodar
+
+### Pré-requisitos
+
+- [Firebase CLI](https://firebase.google.com/docs/cli) (`npm install -g firebase-tools`)
+- Python 3 (opcional, para servidor local simples)
+
+### Comandos (Makefile)
 
 ```bash
-pnpm create next-app --example hello-world hello-world-app
+# Servidor local com Firebase Emulator
+make serve
+
+# Servidor local alternativo (Python HTTP na porta 8080)
+make dev
+
+# Deploy para Firebase Hosting
+make deploy
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Sem Make
+
+```bash
+# Firebase Emulator
+firebase emulators:start --only hosting
+
+# Ou Python HTTP Server
+cd hosting/public && python3 -m http.server 8080
+```
+
+## Features
+
+- Design responsivo (mobile-first, de 374px a 2560px+)
+- Animações de scroll reveal com Intersection Observer
+- Carousel automático com controles manuais
+- Efeito parallax nas grid lines do hero
+- Partículas animadas flutuantes
+- Efeito tilt 3D nos cards (desktop)
+- Botões com efeito magnético (desktop)
+- Cursor glow personalizado (desktop)
+- FAQ com accordion animado
+- Marquee infinito de serviços e parceiros
+- Integração direta com WhatsApp (botão flutuante + formulário)
+- Preloader animado
+
+## Contato
+
+- **Endereço:** R. Francisco Otaviano, 60 — Jardim Chapadão, Campinas/SP
+- **WhatsApp:** (19) 99790.8100 | (19) 99433.3461
+- **E-mail:** contato@despachdocs.com.br
+- **Horário:** Seg a Sex — 08h às 18h
