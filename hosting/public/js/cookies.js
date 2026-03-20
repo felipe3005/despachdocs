@@ -19,9 +19,16 @@ function sendConsentToBackend(consent) {
   }).catch(function () {});
 }
 
+function startAnalyticsIfAllowed() {
+  if (window.DDAnalytics && window.DDAnalytics.start) {
+    window.DDAnalytics.start();
+  }
+}
+
 function acceptCookies() {
   localStorage.setItem('cookieConsent', 'all');
   sendConsentToBackend('all');
+  startAnalyticsIfAllowed();
   closeBanner();
 }
 
@@ -38,6 +45,7 @@ function saveCookiePrefs() {
   var prefsStr = JSON.stringify(prefs);
   localStorage.setItem('cookieConsent', prefsStr);
   sendConsentToBackend(prefs);
+  if (analytics) startAnalyticsIfAllowed();
   closeBanner();
 }
 

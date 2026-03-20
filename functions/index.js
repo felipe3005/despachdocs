@@ -38,6 +38,47 @@ exports.saveCookieConsent = onRequest({ region: "southamerica-east1" }, (req, re
   });
 });
 
+// POST /api/analytics
+exports.saveAnalytics = onRequest({ region: "southamerica-east1" }, (req, res) => {
+  corsHandler(req, res, async () => {
+    if (req.method !== "POST") {
+      return res.status(405).json({ error: "Método não permitido" });
+    }
+
+    try {
+      const { tipo, visitorId, sessionId, dados } = req.body;
+
+      if (!tipo || !visitorId) {
+        return res.status(400).json({ error: "Dados incompletos" });
+      }
+
+      const data = {
+        tipo,
+        visitorId,
+        sessionId: sessionId || null,
+        dados: dados || {},
+        ip: req.ip || null,
+        timestamp: admin.database.ServerValue.TIMESTAMP,
+      };
+
+      // Salva em analytics/{tipo}/{id}
+      const ref = await db.ref("analytics/" + tipo).push(data);
+
+      // Atualiza resumo do visitante
+      const visitorRef = db.ref("analytics/visitantes/" + visitorId);
+      await visitorRef.update({
+        ultimaVisita: admin.database.ServerValue.TIMESTAMP,
+        totalEventos: admin.database.ServerValue.increment(1),
+      });
+
+      return res.status(200).json({ success: true, id: ref.key });
+    } catch (err) {
+      console.error("Erro ao salvar analytics:", err);
+      return res.status(500).json({ error: "Erro interno do servidor" });
+    }
+  });
+});
+
 // POST /api/contact-form
 exports.saveContactForm = onRequest({ region: "southamerica-east1" }, (req, res) => {
   corsHandler(req, res, async () => {

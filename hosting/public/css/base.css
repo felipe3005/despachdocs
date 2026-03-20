@@ -20,6 +20,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.page-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 ::selection {
   background: var(--gold);
   color: var(--navy);
@@ -62,6 +68,7 @@ body::after {
 section {
   padding: 120px 0;
   position: relative;
+  overflow: hidden;
 }
 
 .section-container {

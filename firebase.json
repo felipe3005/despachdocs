@@ -15,6 +15,13 @@
         }
       },
       {
+        "source": "/api/analytics",
+        "function": {
+          "functionId": "saveAnalytics",
+          "region": "southamerica-east1"
+        }
+      },
+      {
         "source": "/api/contact-form",
         "function": {
           "functionId": "saveContactForm",

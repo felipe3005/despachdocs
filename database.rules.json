@@ -7,6 +7,10 @@
     "contatos": {
       ".read": false,
       ".write": false
+    },
+    "analytics": {
+      ".read": false,
+      ".write": false
     }
   }
 }
